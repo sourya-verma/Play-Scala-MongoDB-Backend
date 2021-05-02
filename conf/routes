@@ -1,0 +1,30 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                           controllers.HomeController.index()
+OPTIONS          /*all                                       controllers.HomeController.preflight(all)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+GET     /student/list                               controllers.StudentController.list
+POST     /student/create                            controllers.StudentController.create
+GET     /student/getby/:studentId                               controllers.StudentController.getById(studentId:Int)
+PUT     /student/update                             controllers.StudentController.update
+DELETE     /student/delete/:studentId                             controllers.StudentController.delete(studentId:Int)
+#GET     /student/university/name                               controllers.StudentController.getStudentUniversityName
+#GET     /university/student/count                               controllers.StudentController.getUniversityStudentCount
+GET     /student/searchbyname/:studentName                               controllers.StudentController.searchStudentByName(studentName:String)
+
+GET     /university/list                               controllers.UniversityController.list
+POST     /university/create                            controllers.UniversityController.create
+GET     /university/getby/:universityId                               controllers.UniversityController.getById(universityId:Int)
+PUT     /university/update                             controllers.UniversityController.update
+DELETE     /university/delete/:universityId                             controllers.UniversityController.delete(universityId:Int)
+GET        /university/searchbyname/:universityName                               controllers.UniversityController.searchUniversityByName(universityName:String)
+
+GET         /university/countstudent                                    controllers.UniversityController.universityWithStudentCount
+GET         /student/studentwithuniversityname                                    controllers.StudentController.studentWithUniversityName
