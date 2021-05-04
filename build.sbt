@@ -29,4 +29,18 @@ libraryDependencies ++= Seq(
   "org.reactivemongo" %% "reactivemongo-bson-compat" % "0.20.13",
   // Provide JSON serialization for Joda-Time
   "com.typesafe.play" %% "play-json-joda" % "2.7.4",
+  "com.github.jwt-scala" %% "jwt-core" % "7.1.3"
 )
+
+
+
+//guice,
+//"com.typesafe.play" %% "play-slick" % "5.0.0",
+//"com.typesafe.play" %% "play-slick-evolutions" % "5.0.0",
+//"com.h2database" % "h2" % "1.4.187",
+//"org.postgresql" % "postgresql" % "9.4-1206-jdbc4",
+//"org.scalatestplus.play" %% "scalatestplus-play" % "5.1.0" % Test,
+//"org.mockito" %% "mockito-scala" % "1.11.2",
+//specs2 % Test,
+//"com.github.jwt-scala" %% "jwt-core" % "7.1.3",
+//"mysql" % "mysql-connector-java" % "6.0.6"

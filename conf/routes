@@ -11,20 +11,43 @@ OPTIONS          /*all                                       controllers.HomeCon
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
 GET     /student/list                               controllers.StudentController.list
++nocsrf
 POST     /student/create                            controllers.StudentController.create
 GET     /student/getby/:studentId                               controllers.StudentController.getById(studentId:Int)
++nocsrf
 PUT     /student/update                             controllers.StudentController.update
++nocsrf
 DELETE     /student/delete/:studentId                             controllers.StudentController.delete(studentId:Int)
 #GET     /student/university/name                               controllers.StudentController.getStudentUniversityName
 #GET     /university/student/count                               controllers.StudentController.getUniversityStudentCount
++nocsrf
 GET     /student/searchbyname/:studentName                               controllers.StudentController.searchStudentByName(studentName:String)
-
++nocsrf
 GET     /university/list                               controllers.UniversityController.list
++nocsrf
 POST     /university/create                            controllers.UniversityController.create
++nocsrf
 GET     /university/getby/:universityId                               controllers.UniversityController.getById(universityId:Int)
++nocsrf
 PUT     /university/update                             controllers.UniversityController.update
++nocsrf
 DELETE     /university/delete/:universityId                             controllers.UniversityController.delete(universityId:Int)
 GET        /university/searchbyname/:universityName                               controllers.UniversityController.searchUniversityByName(universityName:String)
-
++nocsrf
 GET         /university/countstudent                                    controllers.UniversityController.universityWithStudentCount
++nocsrf
 GET         /student/studentwithuniversityname                                    controllers.StudentController.studentWithUniversityName
+
++nocsrf
+GET     /user/list                    controllers.UserCredentialController.list
++nocsrf
+POST     /user/create                   controllers.UserCredentialController.create
++nocsrf
+PUT     /user/update                    controllers.UserCredentialController.update
++nocsrf
+DELETE     /user/delete/:id                   controllers.UserCredentialController.delete(id:Int)
++nocsrf
+POST         /user/validate                     controllers.UserCredentialController.validate
+
+
+
